@@ -218,7 +218,7 @@
         <mapperTableEntries name="url" expression="row1.url" type="id_String" nullable="true"/>
         <mapperTableEntries name="directorID" expression="row1.directorID" type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="invalide_movie" activateCondensedTool="true" reject="true">
+      <outputTables sizeState="INTERMEDIATE" name="invalide_movie" activateCondensedTool="true" rejectInnerJoin="true">
         <mapperTableEntries name="movieID" expression="row1.movieID" type="id_String" nullable="true"/>
         <mapperTableEntries name="title" expression="row1.title" type="id_String" nullable="true"/>
       </outputTables>
