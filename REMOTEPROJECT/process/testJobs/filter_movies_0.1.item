@@ -195,7 +195,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="validateMovies">
+    <metadata connector="FLOW" label="metadata" name="validate_movie">
       <column comment="" key="false" length="4" name="movieID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="9" name="title" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="directorName" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -206,15 +206,15 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="validateMovies">
+      <outputTables sizeState="INTERMEDIATE" name="validate_movie">
         <mapperTableEntries name="movieID" expression="row1.movieID" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="title" expression="row1.title" type="id_String" nullable="true"/>
-        <mapperTableEntries name="directorName" expression="row2.directorName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="directorName" expression="row2.directorName" type="id_String" nullable="true"/>
         <mapperTableEntries name="releaseYear" expression="row1.releaseYear" type="id_String" nullable="true"/>
         <mapperTableEntries name="url" expression="row1.url" type="id_String" nullable="true"/>
         <mapperTableEntries name="directorID" expression="row1.directorID" type="id_String" nullable="true"/>
       </outputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="movieID" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="title" type="id_String" nullable="true"/>
         <mapperTableEntries name="releaseYear" type="id_String" nullable="true"/>
@@ -332,14 +332,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="validateMovies" lineStyle="0" metaname="validateMovies" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_1">
-    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="directorName"/>
-      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
-      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-    </elementParameter>
+  <connection connectorName="FLOW" label="validate_movie" lineStyle="0" metaname="validate_movie" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="validateMovies" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="validate_movie" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
