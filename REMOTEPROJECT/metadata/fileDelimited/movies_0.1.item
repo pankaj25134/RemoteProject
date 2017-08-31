@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_XguFsI4vEeeh6YMqmYloww" name="movies" dataPackage="_XgxwEI4vEeeh6YMqmYloww" Server="Localhost 127.0.0.1" FilePath="/home/kailashyadav/Downloads/movies.csv" Encoding="US-ASCII" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_XgxwEI4vEeeh6YMqmYloww" name="default" dataManager="_XguFsI4vEeeh6YMqmYloww">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_XgxwEY4vEeeh6YMqmYloww" id="_l8FYgI4uEeeh6YMqmYloww" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XgxwEo4vEeeh6YMqmYloww" label="movieID" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XgxwE44vEeeh6YMqmYloww" label="title" length="9" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XgxwFI4vEeeh6YMqmYloww" label="releaseYear" length="15" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XgxwFY4vEeeh6YMqmYloww" label="url" length="41" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XgxwFo4vEeeh6YMqmYloww" label="directorID" length="24" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XgxwF44vEeeh6YMqmYloww" label="Column5" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
