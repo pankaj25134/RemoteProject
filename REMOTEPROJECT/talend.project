@@ -371,4 +371,5 @@
     <migrationTask xmi:id="_qzXn7I17EeeWYfCHPhPnIA" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_p7wDYo17EeeWYfCHPhPnIA" login="pankaj.gunwant@osscube.com" firstName="Pankaj" lastName="Gunwant" type="DI" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_G94I8I70EeeHwt98IuJKQg" login="Trigger-Runner" type="DI"/>
 </xmi:XMI>
